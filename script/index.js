@@ -5,7 +5,12 @@ let bagItems = [];
 displayItemsOnHomepage();
 function addToBag(itemId){
   bagItems.push(itemId);
+  displayBagIcon();
+}
 
+function displayBagIcon(){
+  let bagItemCountElement = document.querySelector(".bag-item-count");
+  bagItemCountElement.innerText = bagItems.length;
 }
 
 function displayItemsOnHomepage(){
