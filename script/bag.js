@@ -29,7 +29,7 @@ function displayBagItems(){
 }
 
 function removeFromBag(itemId) {
-  bagItems =bagItems.filter(bagItemId => bagItemId != itemId);
+  bagItems = bagItems.filter(bagItemId => bagItemId != itemId);
   localStorage.setItem("bagItems", JSON.stringify(bagItems));
   loadBagItemObjects();
   displayBagItems();
@@ -59,7 +59,7 @@ function generateItemHTML(item) {
         </div>
       </div>
 
-      <div class="remove-from-cart" onclick = "removeFromBag(${item.id}">X</div>
+      <div class="remove-from-cart" onclick = "removeFromBag(${item.id})">X</div>
     </div>
 
   `;
