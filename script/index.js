@@ -28,7 +28,10 @@ function displayBagIcon(){
 }
 
 function displayItemsOnHomepage(){
-  let itemscontainerElement = document.querySelector(".items-container");
+  let itemsContainerElement = document.querySelector(".items-container");
+  if(!itemsContainerElement){
+    return;
+  }
 
   let innerHtml = '';
   items.forEach(item =>{
@@ -49,5 +52,5 @@ function displayItemsOnHomepage(){
     </div>`  
   });
 
-  itemscontainerElement.innerHTML = innerHtml;
+  itemsContainerElement.innerHTML = innerHtml;
 }
